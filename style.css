@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Poppins:wght@600&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'poppins', sans-serif;
+}
+body{
+    height:100vh;
+    display:flex;
+    background:lightseagreen;
+    align-items:center;
+    justify-content:center;
+
+}
+.title {
+    text-align: center;
+    left:30%;
+    font-style: italic;
+    position: relative;
+    transform: translate(-50%, -50%);
+  }
+.project{
+    position:relative;
+    max-width:500px;
+    width:100%;
+    background:#fff;
+    margin:0 15px;
+    padding:10px 20px;
+    border-radius:7px;
+}
+.project .skill-box{
+    width:100%;
+    margin:25px 0;
+}
+.skill-box .heading{
+    display:block;
+    font-size:14px;
+    font-weight:600;
+    color:#3333;
+}
+.skill-box .skill-bar{
+    width:100%;
+    height:8px;
+    margin-top:6px;
+    background:rgba(0,0,0,0.1);
+    border-radius:6px;
+}
+.skill-bar .skill-per{
+    position:relative;
+    display:block;
+    height:100%;
+    width:100%;
+    background:lightseagreen;
+    border-radius:6px;
+    animation:progress 0.4s ease-in-out forwards;
+    opacity:0;
+}
+.skill-per.html{
+    width:93%;
+}
+.skill-per.css{
+    width:88%;
+}
+.skill-per.git{
+    width:80%;
+}
+.skill-per.javascript{
+    width:80%;
+}
+.skill-per.sql{
+    width:75%;
+}
+@keyframes progress{
+    0%{
+        width:0;
+        opacity:0;
+    }
+    100%{
+       opacity:1;
+    }
+}
+.skill-per .tooltip{
+    position:absolute;
+    right:-14px;
+    top:-28px;
+    font-size:9px;
+    font: weight 500px;
+    color:#fff;
+    padding:2px 6px;
+    border-radius:3px;
+    background:lightseagreen;
+}
+.tooltip::before{
+    content:'';
+    position:absolute;
+    left:50%;
+    bottom:-2px;
+    height:10px;
+    width:10px;
+    z-index:-1;
+    background-color:lightseagreen;
+    transform:translateX(-50%) rotate(45deg);
+}
